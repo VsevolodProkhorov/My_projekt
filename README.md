@@ -20,8 +20,7 @@ The data for this project is sourced from the Kaggle dataset:
 
 ## Schema
 ``` sql
-DROP table if exists netflix;
-CREATE table netflix
+CREATE TABLE IF NOT EXISTS netflix
 (
     show_id      VARCHAR(5),
     type        VARCHAR(10),
