@@ -115,7 +115,8 @@ SELECT category, count(*) AS content_count
 group by category;
 ```
 
-
+## Conclusion
+This analysis provides key insights into Netflix’s content distribution, ratings, and trends. It highlights the dominance of movies over TV shows, the most common ratings, and content trends across different years and countries. Additionally, categorizing content based on keywords helps understand thematic preferences. These findings can assist in making data-driven decisions for content strategy and audience engagement.
 
 
 
