@@ -1,4 +1,3 @@
-``` sql
 DROP table if exists netflix;
 CREATE table netflix
 (
@@ -15,4 +14,4 @@ CREATE table netflix
     listed_in    VARCHAR(250),
     description  VARCHAR(550)
 );
-```
+
