@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS netflix
 SELECT type, count(type) as Number_of_TV from netflix
 group by 1;
 ```
-![image](https://github.com/user-attachments/assets/452dd4ab-20bb-4127-8885-c3a9d855dc61)
+![image](https://github.com/VsevolodProkhorov/Netflix_Data_Analysis/blob/main/6.png)
 
 ### 2. Find the Most Common Rating for Movies and TV Shows
 ``` sql
@@ -59,7 +59,7 @@ from (
 ) as ranked_ratings
 where rn <= 2;
 ```
-![image](https://github.com/user-attachments/assets/b8c59eca-fba3-409c-bfc6-e3d508797dc4)
+![image](https://github.com/VsevolodProkhorov/Netflix_Data_Analysis/blob/main/5.png)
 
 ### 3. List All Movies Released in a Specific Year (e.g., 2020)
 ``` sql
@@ -78,7 +78,7 @@ group by 1
 order by total_content desc
 limit 5
 ```
-![image](https://github.com/user-attachments/assets/b25c7ef0-434b-485b-a8bb-6976c3f0f272)
+![image](https://github.com/VsevolodProkhorov/Netflix_Data_Analysis/blob/main/4.png)
 
 ### 5. Identify the Longest Movie
 ``` sql
@@ -92,7 +92,7 @@ order by SPLIT_PART(duration, ' ', 1)::INT DESC;
 SELECT *from netflix
 where TO_DATE(date_added, 'Month DD, YYYY') >= CURRENT_DATE - INTERVAL '5 years';
 ```
-![image](https://github.com/user-attachments/assets/db6ad1ac-8550-468d-914c-5824dd04e976)
+![image](https://github.com/VsevolodProkhorov/Netflix_Data_Analysis/blob/main/3.png)
 
 ### 7. Find the average number of content releases in India on Netflix for each of the last 10 years.
 ``` sql
@@ -107,7 +107,7 @@ group by country, release_year
 order by avg_release desc
 limit 5; 
 ```
-![image](https://github.com/user-attachments/assets/07677290-ab93-4c6c-8f76-708bcf06e082)
+![image](https://github.com/VsevolodProkhorov/Netflix_Data_Analysis/blob/main/2.png)
 
 ### 8. Categorize Content Based on the Presence of 'love','romantic','kill' and 'horror' Keywords
 ``` sql
@@ -121,7 +121,7 @@ SELECT category, count(*) AS content_count
 	) as categorized_content
 group by category;
 ```
-![image](https://github.com/user-attachments/assets/1e8af051-ad9b-44ef-9454-d958eb2e9f74)
+![image](https://github.com/VsevolodProkhorov/Netflix_Data_Analysis/blob/main/1.png)
 
 ## Conclusion
 This analysis provides key insights into Netflix’s content distribution, ratings, and trends. It highlights the dominance of movies over TV shows, the most common ratings, and content trends across different years and countries. Additionally, categorizing content based on keywords helps understand thematic preferences. These findings can assist in making data-driven decisions for content strategy and audience engagement.
